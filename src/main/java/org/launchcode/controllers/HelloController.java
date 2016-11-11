@@ -36,6 +36,7 @@ public class HelloController {
 		HelloLog log = new HelloLog(name);
 		helloLogDao.save(log);
 		model.addAttribute("message", HelloMessage.getMessage(name));
+		model.addAttribute("title", "Hello, Spring! Reponse");
 		return "hello"; //if having folders, put in the path name
 	}
 	
@@ -43,6 +44,7 @@ public class HelloController {
 	public String log(Model model) {
 		List<HelloLog> logs = helloLogDao.findAll();
 		model.addAttribute("logs", logs);
+		model.addAttribute("title", "Hello Logs!");
 		return "log";
 	}
 	

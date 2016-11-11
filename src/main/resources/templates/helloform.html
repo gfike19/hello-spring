@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th = 'http://www.thymeleaf.org'>
-<head><title>Hello, spring</title>
+<head th:replace="template :: header">
 </head>
 <body>
 <form method="post" action="hello">
@@ -8,4 +8,5 @@
 <button type="submit">Say hello!</button>
 </form>
 </body>
+<div th:replace="template :: footer"></div>
 </html>
